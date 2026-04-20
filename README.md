@@ -79,5 +79,5 @@ This project demonstrates how Python can be used for effective data analysis, vi
 
 ## 👩‍💻 Author
 
-Usha Rani
+Kotnaka Trisha
 B.Tech Student | Aspiring Software Engineer
