@@ -1,4 +1,21 @@
 import pandas as pd
+
+# Load dataset FIRST
+df = pd.read_excel(r"C:\Users\hp\Downloads\Health.xlsx")
+
+# THEN cleaning
+df = df.drop_duplicates()
+
+df['Value'] = df['Value'].fillna(df['Value'].median())
+df['State'] = df['State'].fillna(df['State'].mode()[0])
+
+print("Missing Values:\n", df.isnull().sum())
+
+print(df.describe())
+
+print(df.corr(numeric_only=True))
+
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import ttest_ind
@@ -135,3 +152,4 @@ plt.xlabel("Year")
 plt.ylabel("Value")
 plt.legend()
 plt.show()
+
